@@ -1,0 +1,1 @@
+x = int(1)   # x will be 1

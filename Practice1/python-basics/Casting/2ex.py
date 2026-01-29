@@ -1,0 +1,1 @@
+y = int(2.8) # y will be 2
