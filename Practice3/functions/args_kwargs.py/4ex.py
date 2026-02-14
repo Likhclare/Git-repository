@@ -7,3 +7,4 @@ def my_function(*numbers):
 print(my_function(1, 2, 3))
 print(my_function(10, 20, 30, 40))
 print(my_function(5))
+#If you do not know how many arguments will be passed into your function, add a * before the parameter name.

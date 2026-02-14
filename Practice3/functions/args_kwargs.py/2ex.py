@@ -5,3 +5,4 @@ def my_function(*args):
   print("All arguments:", args)
 
 my_function("Emil", "Tobias", "Linus")
+#If you do not know how many arguments will be passed into your function, add a * before the parameter name.
