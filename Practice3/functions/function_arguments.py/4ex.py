@@ -5,3 +5,4 @@ my_function("Emil")
 my_function("Tobias")
 my_function()
 my_function("Linus")
+#we can put arguments to function and use them

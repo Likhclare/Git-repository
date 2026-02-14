@@ -4,3 +4,4 @@ def my_function(fname):
 my_function("Emil")
 my_function("Tobias")
 my_function("Linus")
+#we can put arguments to function and use them
