@@ -5,3 +5,4 @@ class Student(Person):
 
   def welcome(self):
     print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+    #Python also has a super() function that will make the child class inherit all the methods and properties from its parent

@@ -9,3 +9,4 @@ class Dog(Animal):
 d = Dog()
 d.speak()
 d.bark()
+#Inheritance allows us to define a class that inherits all the methods and properties from another class.
