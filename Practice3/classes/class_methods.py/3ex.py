@@ -8,3 +8,4 @@ class Person:
 
 p1 = Person("Tobias", 28)
 print(p1.get_info())
+#Methods are functions that belong to a class. They define the behavior of objects created from the class.

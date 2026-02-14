@@ -4,3 +4,4 @@ class Person:
 
 p = Person("Ali")
 print(p.name)
+#To create a class, use the keyword class

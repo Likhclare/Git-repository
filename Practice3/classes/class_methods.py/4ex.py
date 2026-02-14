@@ -10,3 +10,4 @@ class Person:
 p1 = Person("Linus", 25)
 p1.celebrate_birthday()
 p1.celebrate_birthday()
+#Methods are functions that belong to a class. They define the behavior of objects created from the class.

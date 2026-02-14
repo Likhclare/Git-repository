@@ -4,3 +4,4 @@ class Dog:
 
 d = Dog()
 print(d.bark())
+#To create a class, use the keyword class

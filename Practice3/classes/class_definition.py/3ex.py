@@ -4,3 +4,4 @@ class Car:
 
 c = Car()
 c.drive()
+#To create a class, use the keyword class
