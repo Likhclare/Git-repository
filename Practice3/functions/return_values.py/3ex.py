@@ -4,3 +4,4 @@ def my_function():
 x, y = my_function()
 print("x:", x)
 print("y:", y)
+#Functions can send data back to the code that called them using the return statement.
