@@ -73,7 +73,7 @@ while True:
             sys.exit()
 
         if event.type == INC_SPEED:
-            speed += 0.
+            speed += 0.5
 
     if not game_over:
 
