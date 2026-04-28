@@ -4,7 +4,6 @@ import os
 import json
 import sys
 
-# --- ЖЕСТКАЯ ФИКСАЦИЯ РАБОЧЕЙ ДИРЕКТОРИИ ---
 # Находим путь к папке, где лежит этот файл main.py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # Принудительно заставляем Python работать внутри этой папки

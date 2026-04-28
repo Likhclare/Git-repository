@@ -4,9 +4,6 @@ import os
 import json
 import sys
 
-# =========================
-# 🔒 ЖЁСТКАЯ ФИКСАЦИЯ ПАПКИ ПРОЕКТА
-# =========================
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BASE_DIR)
 
@@ -14,9 +11,6 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 LEADERBOARD_FILE = os.path.join(BASE_DIR, "leaderboard.json")
 SETTINGS_FILE = os.path.join(BASE_DIR, "settings.json")
 
-# =========================
-# 🔧 PYGAME INIT
-# =========================
 pygame.init()
 WIDTH, HEIGHT = 400, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -31,9 +25,6 @@ BLACK, WHITE, GRAY = (0, 0, 0), (255, 255, 255), (150, 150, 150)
 font = pygame.font.SysFont("Verdana", 20)
 big_font = pygame.font.SysFont("Verdana", 40)
 
-# =========================
-# 📦 JSON SYSTEM
-# =========================
 def load_json(path, default):
     if not os.path.exists(path):
         with open(path, "w", encoding="utf-8") as f:
@@ -54,9 +45,6 @@ def save_json(path, data):
 
 game_settings = load_json(SETTINGS_FILE, {"difficulty": "Medium"})
 
-# =========================
-# 🖼️ ASSETS LOADER
-# =========================
 def get_asset(name, size, rot=0):
     path = os.path.join(ASSETS_DIR, name)
     try:
@@ -79,9 +67,6 @@ nitro_img = get_asset("nitro.png", (30, 40))
 shield_img = get_asset("shield.png", (40, 40))
 repair_img = get_asset("repair.png", (40, 40))
 
-# =========================
-# 🎮 UI
-# =========================
 class Button:
     def __init__(self, text, x, y, w, h, color):
         self.rect = pygame.Rect(x, y, w, h)
@@ -108,9 +93,6 @@ def draw_text(text, x, y, color=BLACK, big=False):
     img = f.render(str(text), True, color)
     screen.blit(img, (x, y))
 
-# =========================
-# 🏆 LEADERBOARD
-# =========================
 def show_leaderboard():
     while True:
         screen.fill(WHITE)
@@ -137,9 +119,6 @@ def show_leaderboard():
                 if back.clicked(e.pos):
                     return
 
-# =========================
-# 👤 NAME INPUT
-# =========================
 def input_name():
     name = ""
     while True:
@@ -163,9 +142,6 @@ def input_name():
                 elif e.unicode.isalnum() and len(name) < 10:
                     name += e.unicode
 
-# =========================
-# 🚗 GAME
-# =========================
 def game_loop(name):
     base_speed = {"Easy": 3, "Medium": 4.5, "Hard": 6}.get(
         game_settings["difficulty"], 4.5
@@ -300,9 +276,6 @@ def game_loop(name):
     lb.append({"name": name, "score": score, "dist": int(dist)})
     save_json(LEADERBOARD_FILE, lb)
 
-# =========================
-# 🎮 MENU
-# =========================
 def menu():
     name = input_name()
 
